@@ -28,7 +28,7 @@ input[type=number] {
 /* ------------declaring global variable ------------- */
 
 :root{
-    --dark_bg: rgb(26, 32, 74);
+    --dark_bg: rgb(9, 17, 44);
     --lighter_bg: rgb(31, 38, 88);
 }
 

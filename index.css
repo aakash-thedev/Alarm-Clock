@@ -335,14 +335,15 @@ main{
 @media screen and (max-width: 420px) {
 
     main{
-        min-height: 100vh;
+        min-height: 90vh;
         width: 100vw;
+        border-radius: 0px;
     }
 
     .tab-content{
         height: auto;
         width: 100%;
-        margin-top: -15%;
+        margin-top: -7%;
     }
 
     /* -------------- Middle TAB-CONTENT CSS where we need to show alarms and all------------- */
@@ -351,12 +352,6 @@ main{
         height: 15.4rem;
         width: 15.4rem;
         box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 0px 2px, rgba(29, 220, 245, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.5) 0px 1px 0px inset;
-        border-radius: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
     }
 
     #current-time-clock small{
@@ -375,23 +370,17 @@ main{
     /* ------------Set Alarm Section CSS ------------- */
 
     #lower-section > #set-alarm-heading{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         margin-left: 8%;
     }
 
+    #lower-section #input-alarm{
+        height: 70px;
+    }
+
     #lower-section #input-alarm input{
+        width: 20%;
         box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 0px 2px, rgba(29, 220, 245, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.5) 0px 1px 0px inset;
-    }
-
-    /* ---------Lower Nav Links CSS ------------ */
-
-    .nav-link:nth-child(2n+1){
-        width: 50%;
-        color: white;
-        border-bottom-left-radius: 15px;
-    }
-    .nav-link:nth-child(2n){
-        border-bottom-right-radius: 15px;
     }
 
     #alarm-items-wrapper{

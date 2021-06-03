@@ -42,10 +42,10 @@ function displayCurrentTime(){
         day = 'Sunday';
     }
 
-    let hour = date.getHours() == '12' ? date.getHours() : eval(date.getHours() - 12);
-    if(Number(hour) < 10){
-        hour = '0' + "" + hour;
-    }
+    let hour = date.getHours() <= 12 ? eval(12 - date.getHours()) : eval(date.getHours() - 12);
+    // if(Number(hour) < 10){
+    //     hour = '0' + "" + hour;
+    // }
     let minutes = date.getMinutes();
     if(Number(minutes) < 10){
         minutes = '0' + "" + minutes;

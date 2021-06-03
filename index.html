@@ -28,9 +28,48 @@
                     <img src="icons8-alarm-48.png">
                 </section>
 
+                <section id="lower-section">
+
+                    <span id="set-alarm-heading"> Set Alarm </span>
+
+                    <div id="input-alarm">
+
+                        <input id="getUserHours" type="number" placeholder="00"/>
+                        <input id="getUserMinutes" type="number" placeholder="00"/>
+                        <input id="getUserSeconds" type="number" placeholder="00"/>
+
+                    </div>
+
+                    <button id="add-alarm">
+                        <img src="icons8-plus.svg" id="plus">
+                        Add Alarm
+                        <img src="icons8-alarm-on-100.png" id="clock-symbol">
+                    </button>
+
+                </section>
+
             </div>
 
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">Alarms</div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+                <h3 id="al-heading">Alarms</h3>
+
+                <div id="alarm-items-wrapper">
+
+                    <div class="alarm-items">
+
+                        <img src="icons8-retro-alarm-clock-24.png" class="logo">
+                        <section class="time-day">
+                            <span class="time">09:20</span>
+                            <small class="day">Thursday</small>
+                        </section>
+    
+                        <img src="icons8-delete-26.png" class="delete">
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -42,6 +81,50 @@
         </nav>
 
     </main>
+
+    <section id="about-developer">
+
+        <img src="https://res.cloudinary.com/messcord/image/upload/v1622477693/triow07mfoyvjxxbrlvk.jpg"> 
+
+        <h2>Alarm Clock App</h2>
+        <small>by Aakash Srivastava</small>
+
+        <span id="description">
+            This App will allow user to create alarms
+            see present Day, Date & Time.
+            User can delete old alarms,
+            If upcoming alarms will be deleted no alarm will be displayed for that.
+            I will be adding some more features to it in future like stopwatch and timer.
+
+            <small>I made this app keeping Mobile View in mind. Try using it in Mobile and tell me your User Experience :)</small>
+        </span>
+
+        <section id="contact">
+
+            <h3>Contact</h3>
+
+            <span id="social-links">
+                <a href="https://www.facebook.com/aakash.srivastava.3910829/">
+                    <img src="icons8-facebook.svg">
+                </a>
+
+                <a href="https://www.linkedin.com/in/aakash-srivastava-80ba01184/">
+                    <img src="icons8-linkedin.svg" id="linkedin">
+                </a>
+
+                <a href="https://github.com/aakash-thedev">
+                    <img src="icons8-github.svg">
+                </a>
+
+                <a href="https://www.instagram.com/aakash.srivastava20/">
+                    <img src="icons8-instagram.svg" id="instagram">
+                </a>
+            
+            </span>
+
+        </section>
+
+    </section>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="index.js"></script>

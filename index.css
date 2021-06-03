@@ -2,7 +2,30 @@
 
 body{
     font-family: 'Roboto', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
+*:focus{
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* ------------declaring global variable ------------- */
 
 :root{
     --dark_bg: rgb(26, 32, 74);
@@ -11,11 +34,11 @@ body{
 
 /* -------------Root App CSS ------------- */
 main{
-    height: 96vh;
+    min-height: 745px;
     width: 420px;
     background-color: var(--dark_bg);
-    margin: 2% auto;
     padding: 0.6%;
+    padding-top: 0.8%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -31,7 +54,6 @@ main{
     width: 100%;
     background-color: var(--dark_bg);
     color: white;
-    margin-bottom: 3%;
 }
 
 #clock-heading > img{
@@ -47,11 +69,14 @@ main{
 /* -------------- Middle TAB-CONTENT CSS where we need to show alarms and all------------- */
 
 .tab-content{
-    height: 90%;
+    height: 650px;
     width: 100%;
     padding-top: 2%;
     background-color: var(--dark_bg);
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #current-time-clock{
@@ -68,7 +93,7 @@ main{
 
 #current-time-clock small{
     color: rgb(216, 216, 216);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 #day{
@@ -80,9 +105,143 @@ main{
 }
 
 #current-time-clock img{
-    margin-top: 2.5%;
+    margin-top: 5%;
     margin-left: 1.5%;
     height: 25px;
+}
+
+/* ------------Set Alarm Section CSS ------------- */
+
+#lower-section{
+    margin-top: 6%;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#lower-section > #set-alarm-heading{
+    font-size: 1.7rem;
+    color: rgb(206, 206, 206);
+    margin-bottom: 7%;
+    margin-left: 6%;
+}
+
+#lower-section #input-alarm{
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 12%;
+}
+
+#lower-section #input-alarm input{
+    height: 100%;
+    width: 23.2%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    background: transparent;
+    color: white;
+    font-size: 3em;
+    text-align: center;
+}
+
+#add-alarm{
+    height: 53px;
+    width: 84%;
+    margin: -1% auto;
+    border: none;
+    color: var(--dark_bg);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    position: relative;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+#add-alarm #plus{
+    height: 40px;
+    margin-right: 5%;
+}
+
+#add-alarm #clock-symbol{
+    height: 20px;
+    position: absolute;
+    right: 2.2%;
+    filter: grayscale(1);
+}
+
+#add-alarm:hover{
+    transform: scale(1.007);
+}
+
+#add-alarm:active{
+    transform: scale(0.9);
+}
+
+/* ---------------Alarm Items CSS------------ */
+
+#al-heading{
+    font-size: 19px;
+    margin-bottom: 3%;
+    margin-left: 2%;
+}
+
+#alarm-items-wrapper{
+    width: 100%;
+}
+
+.alarm-items{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 2.2%;
+    transition: all 0.3s ease-in-out;
+    /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset; */
+}
+
+.logo{
+    height: 30px;
+    margin-right: 4%;
+}
+
+.alarm-items .time-day{
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.time-day .time{
+    font-size: 32px;
+}
+
+.time-day .day{
+    font-size: 14px;
+    color: rgb(233, 233, 233);
+    margin-left: 5%;
+}
+
+.delete{
+    position: absolute;
+    right: 4%;
+    height: 15px;
+}
+
+.alarm-items:hover{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    transform: scale(1.008);
+    background-color: grey;
 }
 
 /* ---------Lower Nav Links CSS ------------ */
@@ -90,4 +249,80 @@ main{
 .nav-link{
     width: 50%;
     color: white;
+}
+
+
+/* --------------------------- ABOUT DEVELOPER CSS ---------------------- */
+#about-developer{
+    width: 450px;
+    margin-left: 3%;
+    padding: 2%;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+#about-developer > img{
+    position: absolute;
+    right: 3%;
+    top: 2%;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+}
+
+#about-developer h2{
+    font-size: 50px;
+    color: var(--dark_bg);
+}
+
+#about-developer small{
+    color: grey;
+    font-size: 17px;
+}
+
+#description{
+    display: block;
+    margin-top: 13%;
+    color: var(--dark_bg);
+}
+
+#description > small{
+    display: block;
+    font-size: 14px;
+}
+
+/* -------------contact css ---------- */
+
+#contact{
+    margin-top: 6%;
+    color: grey;
+}
+
+#contact > h3{
+    font-size: 20px;
+    display: inline-block;
+    width: 80px;
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+#social-links{
+    position: relative;
+    width: 200px;
+    margin-left: -3%;
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#social-links a img{
+    height: 30px;
+}
+
+#social-links a #linkedin{
+    height: 25px;
+}
+
+#instagram{
+    height: 24px;
 }

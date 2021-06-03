@@ -34,7 +34,7 @@ input[type=number] {
 
 /* -------------Root App CSS ------------- */
 main{
-    min-height: 745px;
+    min-height: 750px;
     width: 420px;
     background-color: var(--dark_bg);
     padding: 0.6%;
@@ -43,22 +43,24 @@ main{
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    border-radius: 15px;
 }
 
 /* ---------------Heading CSS --------------- */
 
 #clock-heading{
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 100%;
     background-color: var(--dark_bg);
     color: white;
+    margin-top: 2%;
 }
 
 #clock-heading > img{
     height: 28px;
-    margin-right: 5%;
+    margin-left: 3%;
+    margin-right: 71%;
     filter: invert();
 }
 
@@ -82,7 +84,7 @@ main{
 #current-time-clock{
     height: 18rem;
     width: 18rem;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 0px 2px, rgba(29, 220, 245, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.5) 0px 1px 0px inset;
     border-radius: 50%;
     display: flex;
     flex-direction: column;
@@ -289,6 +291,157 @@ main{
 #description > small{
     display: block;
     font-size: 14px;
+}
+
+/* -------------contact css ---------- */
+
+#contact{
+    margin-top: 6%;
+    color: grey;
+}
+
+#contact > h3{
+    font-size: 20px;
+    display: inline-block;
+    width: 80px;
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+#social-links{
+    position: relative;
+    width: 200px;
+    margin-left: -3%;
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#social-links a img{
+    height: 30px;
+}
+
+#social-links a #linkedin{
+    height: 25px;
+}
+
+#instagram{
+    height: 24px;
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@ media queries @@@@@@@@@@@@@@@@@@@@@ */
+
+@media screen and (max-width: 420px) {
+
+    main{
+        min-height: 100vh;
+        width: 100vw;
+    }
+
+    .tab-content{
+        height: auto;
+        width: 100%;
+        margin-top: -15%;
+    }
+
+    /* -------------- Middle TAB-CONTENT CSS where we need to show alarms and all------------- */
+
+    #current-time-clock{
+        height: 15.4rem;
+        width: 15.4rem;
+        box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 0px 2px, rgba(29, 220, 245, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.5) 0px 1px 0px inset;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    #current-time-clock small{
+        color: rgb(216, 216, 216);
+        font-size: 0.9rem;
+    }
+
+    #day{
+        margin-bottom: 2%;
+    }
+
+    #current-time-clock span{
+        font-size: 4.5rem;
+    }
+
+    /* ------------Set Alarm Section CSS ------------- */
+
+    #lower-section > #set-alarm-heading{
+        font-size: 1.5rem;
+        margin-left: 8%;
+    }
+
+    #lower-section #input-alarm input{
+        box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 0px 2px, rgba(29, 220, 245, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.5) 0px 1px 0px inset;
+    }
+
+    /* ---------Lower Nav Links CSS ------------ */
+
+    .nav-link:nth-child(2n+1){
+        width: 50%;
+        color: white;
+        border-bottom-left-radius: 15px;
+    }
+    .nav-link:nth-child(2n){
+        border-bottom-right-radius: 15px;
+    }
+
+    #alarm-items-wrapper{
+        height: 70vh;
+        width: 100%;
+        overflow-y: scroll;
+        border-bottom: 1px solid rgb(82, 98, 126);
+    }
+
+    .alarm-items:hover{
+        background-color: rgb(28, 43, 85);
+    }
+
+    /* --------------------------- ABOUT DEVELOPER CSS ---------------------- */
+    #about-developer{
+        width: 100vw;
+        margin-top: 5%;
+        margin-left: -0.3%;
+        padding: 3%;
+    }
+
+    #about-developer > img{
+        position: absolute;
+        right: 21%;
+        top: 16%;
+        border-radius: 50%;
+        height: 48px;
+        width: 49px;
+    }
+
+    #about-developer h2{
+        font-size: 50px;
+        color: var(--dark_bg);
+    }
+
+    #about-developer small{
+        color: grey;
+        font-size: 17px;
+    }
+
+    #description{
+        display: block;
+        margin-top: 13%;
+        color: var(--dark_bg);
+    }
+
+    #description > small{
+        display: block;
+        font-size: 14px;
+    }
 }
 
 /* -------------contact css ---------- */

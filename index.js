@@ -52,6 +52,10 @@ function displayCurrentTime(){
     }
     let second = date.getSeconds();
 
+    if(second < 10){
+        second = '0' + '' + second
+    }
+
     currentDay.innerText = day;
     currentDate.innerText = String(date).substring(4, 16);
     currentHour.innerText = hour + ":" + minutes;

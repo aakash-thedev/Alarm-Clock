@@ -335,7 +335,7 @@ main{
 @media screen and (max-width: 420px) {
 
     main{
-        min-height: 90vh;
+        min-height: 92vh;
         width: 100vw;
         border-radius: 0px;
     }

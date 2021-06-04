@@ -335,16 +335,27 @@ main{
 
 @media screen and (max-width: 420px) {
 
+
     main{
         min-height: 92vh;
         width: 100vw;
         border-radius: 0px;
     }
 
+    /* ---------------Heading CSS --------------- */
+
+    #clock-heading{
+        z-index: 99;
+    }
+
     .tab-content{
         height: auto;
         width: 100%;
         margin-top: -14%;
+    }
+
+    #nav-profile{
+        margin-top: 10%;
     }
 
     /* -------------- Middle TAB-CONTENT CSS where we need to show alarms and all------------- */

@@ -8,6 +8,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    filter: contrast(1.15);
 }
 
 *:focus{
@@ -58,10 +59,10 @@ main{
 }
 
 #clock-heading > img{
-    height: 28px;
+    height: 32px;
     margin-left: 3%;
     margin-right: 71%;
-    filter: invert();
+    filter: invert() brightness(2) contrast(1.25);
 }
 
 #clock-heading small{

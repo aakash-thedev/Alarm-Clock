@@ -42,10 +42,18 @@ function displayCurrentTime(){
         day = 'Sunday';
     }
 
-    let hour = date.getHours() <= 12 ? eval(12 - date.getHours()) : eval(date.getHours() - 12);
-    // if(Number(hour) < 10){
-    //     hour = '0' + "" + hour;
-    // }
+    let hour = date.getHours();
+
+    hour = hour % 12;
+
+    if(hour == 0){
+        hour = 12;
+    }
+
+    if(Number(hour) < 10){
+        hour = '0' + "" + hour;
+    }
+
     let minutes = date.getMinutes();
     if(Number(minutes) < 10){
         minutes = '0' + "" + minutes;
@@ -65,6 +73,7 @@ function displayCurrentTime(){
 
     for(let i=0; i<alarmsObj.length; i++){
         if((currentHour.innerText + ':' + second) == `${alarmsObj[i].hour}:${alarmsObj[i].minute}:${alarmsObj[i].seconds}`){
+            
             alert("Alarm Ringing");
             alarmsObj.splice(i, 1);
         }

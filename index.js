@@ -96,6 +96,14 @@ var addAlarmButton = document.getElementById('add-alarm');
 
 function createNewAlarmDOM(){
 
+    if(String(userHours.value).length == 1){
+        userHours.value = '0' + '' + String(userHours.value);
+    }
+    
+    if(String(userMinutes.value).length == 1){
+        userMinutes.value = '0' + '' + String(userMinutes.value);
+    }
+
     console.log(`${userHours.value}:${userMinutes.value}:${userSeconds.value}`);
 
     if(userHours.value == '' || userHours.value == null || userHours.value == 'undefined' || userHours.value == undefined || userHours.value == '00'){

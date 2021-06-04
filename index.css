@@ -344,7 +344,7 @@ main{
     .tab-content{
         height: auto;
         width: 100%;
-        margin-top: -10%;
+        margin-top: -14%;
     }
 
     /* -------------- Middle TAB-CONTENT CSS where we need to show alarms and all------------- */
@@ -432,40 +432,4 @@ main{
         display: block;
         font-size: 14px;
     }
-}
-
-/* -------------contact css ---------- */
-
-#contact{
-    margin-top: 6%;
-    color: grey;
-}
-
-#contact > h3{
-    font-size: 20px;
-    display: inline-block;
-    width: 80px;
-    border-bottom: 1px solid rgb(219, 219, 219);
-}
-
-#social-links{
-    position: relative;
-    width: 200px;
-    margin-left: -3%;
-    margin-top: 1%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-#social-links a img{
-    height: 30px;
-}
-
-#social-links a #linkedin{
-    height: 25px;
-}
-
-#instagram{
-    height: 24px;
 }

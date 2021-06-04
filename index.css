@@ -344,7 +344,7 @@ main{
     .tab-content{
         height: auto;
         width: 100%;
-        margin-top: -7%;
+        margin-top: -10%;
     }
 
     /* -------------- Middle TAB-CONTENT CSS where we need to show alarms and all------------- */
